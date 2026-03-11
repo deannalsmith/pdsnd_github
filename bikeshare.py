@@ -204,6 +204,7 @@ def user_stats(df):
     print('-'*40)
 
 def rawdata(df):
+    """prints 5 rows of raw data at a time if user requests"""
     rows = 0
     while rows < df.shape[0]:
         raw_data = input('Would you like to see the raw data? \n')
