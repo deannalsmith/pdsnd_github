@@ -2,7 +2,6 @@ import time
 import pandas as pd
 import numpy as np
 
-
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -107,8 +106,8 @@ def load_data(city, month, day):
         # filter by day of week to create the new dataframe
         days =  ['sunday', 'monday', 'tuesday',' wednesday', 'thursday', 'friday', 'saturday']
         day = int(day)
-        dayy = days[day-1]
-        df = df[df['day_of_week'] == dayy.title()]
+        day_week = days[day-1]
+        df = df[df['day_of_week'] == day_week.title()]
     return df
 
 def time_stats(df):
@@ -134,7 +133,6 @@ def time_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
 
@@ -157,7 +155,6 @@ def station_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
 
@@ -174,7 +171,6 @@ def trip_duration_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-
 
 def user_stats(df):
     """Displays statistics on bikeshare users."""
