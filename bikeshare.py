@@ -107,8 +107,8 @@ def load_data(city, month, day):
         # filter by day of week to create the new dataframe
         days =  ['sunday', 'monday', 'tuesday',' wednesday', 'thursday', 'friday', 'saturday']
         day = int(day)
-        dayy = days[day-1]
-        df = df[df['day_of_week'] == dayy.title()]
+        day_week = days[day-1]
+        df = df[df['day_of_week'] == day_week.title()]
     return df
 
 def time_stats(df):
